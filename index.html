@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apprends le Trading - Communauté Telegram</title>
+    <title>AlgoTrade Pro - Logiciel de Trading Automatisé</title>
     
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -49,7 +49,7 @@
     </script>
 
     <style>
-        /* Custom scrollbar for a premium feel */
+        /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -65,8 +65,14 @@
         }
         
         .glass-effect {
-            background: rgba(15, 23, 42, 0.7);
-            backdrop-filter: blur(10px);
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(8px);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
     </style>
@@ -100,21 +106,25 @@
         <!-- TradingView Widget END -->
     </div>
 
-    <!-- Navigation (Simple) -->
-    <nav class="fixed w-full z-50 glass-effect border-b border-slate-800/50">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-effect">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0 flex items-center">
-                    <span class="text-xl font-bold text-white tracking-tight">Trading<span class="text-brand-accent">Pro</span></span>
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="w-8 h-8 bg-brand-accent rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <span class="text-xl font-bold text-white tracking-tight">AlgoTrade<span class="text-brand-accent">Pro</span></span>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#learning" class="text-sm font-medium hover:text-brand-accent transition-colors">Programme</a>
-                    <a href="#how-it-works" class="text-sm font-medium hover:text-brand-accent transition-colors">Fonctionnement</a>
-                    <a href="#about" class="text-sm font-medium hover:text-brand-accent transition-colors">À propos</a>
+                    <a href="#unique" class="text-sm font-medium hover:text-brand-accent transition-colors">Pourquoi nous ?</a>
+                    <a href="#benefits" class="text-sm font-medium hover:text-brand-accent transition-colors">Avantages</a>
+                    <a href="#pricing" class="text-sm font-medium hover:text-brand-accent transition-colors">Offre Gratuit</a>
+                    <a href="#faq" class="text-sm font-medium hover:text-brand-accent transition-colors">FAQ</a>
                 </div>
                 <div>
-                    <a href="https://t.me/ton_canal_trading" target="_blank" class="bg-brand-accent/10 text-brand-accent hover:bg-brand-accent hover:text-white px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 border border-brand-accent/20">
-                        Telegram
+                    <a href="#pricing" class="bg-brand-accent text-brand-dark hover:bg-green-400 px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 shadow-lg shadow-brand-accent/20">
+                        Accès Gratuit
                     </a>
                 </div>
             </div>
@@ -122,219 +132,612 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <!-- Background glow effects -->
+    <header class="relative z-10 pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-0 pointer-events-none">
-            <div class="absolute top-20 left-1/4 w-96 h-96 bg-brand-secondary/20 rounded-full blur-[100px]"></div>
-            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-accent/10 rounded-full blur-[100px]"></div>
+            <div class="absolute top-20 left-1/4 w-96 h-96 bg-brand-secondary/10 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-accent/10 rounded-full blur-[120px]"></div>
         </div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="animate-slide-up">
-                <span class="inline-block py-1 px-3 rounded-full bg-slate-800/50 border border-slate-700 text-brand-accent text-xs font-semibold tracking-wide uppercase mb-6">
-                    Rejoins l'élite du trading
-                </span>
-                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white tracking-tight mb-6 leading-tight">
-                    Apprends le trading <br class="hidden sm:block" />
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-secondary">comme un pro.</span>
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 mb-8">
+                    <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+                    <span class="text-xs font-semibold text-brand-accent uppercase tracking-wide">Logiciel de Trading Automatisé</span>
+                </div>
+                
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-8 leading-tight">
+                    Le Trading Automatisé <br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-secondary">Nouvelle Génération</span>
                 </h1>
-                <p class="mt-4 text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10">
-                    Rejoins une communauté Telegram où tu apprends le trading étape par étape : bases, gestion du risque, psychologie et plans de trading.
+                
+                <p class="mt-4 text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                    AlgoTrade Pro™ est un logiciel puissant qui trade pour vous, automatiquement. 
+                    Il fonctionne en autonomie pour générer des revenus passifs, 100% mains libres.
                 </p>
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a href="https://t.me/ton_canal_trading" target="_blank" class="group relative inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-brand-accent rounded-full hover:bg-green-500 hover:shadow-lg hover:shadow-brand-accent/30 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-accent focus:ring-offset-brand-dark">
-                        <span>Rejoindre le canal Telegram</span>
-                        <svg class="w-5 h-5 ml-2 -mr-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-16">
+                    <a href="#pricing" class="w-full sm:w-auto px-8 py-4 text-base font-bold text-brand-dark bg-brand-accent rounded-full hover:bg-green-400 transition-all duration-200 shadow-lg shadow-brand-accent/25 hover:-translate-y-1">
+                        Obtenir Gratuitement
+                    </a>
+                    <a href="https://t.me/ton_canal_trading" target="_blank" class="w-full sm:w-auto px-8 py-4 text-base font-bold text-white bg-slate-800 rounded-full hover:bg-slate-700 transition-all duration-200 border border-slate-700">
+                        Rejoindre Telegram
                     </a>
                 </div>
-                <p class="mt-4 text-sm text-slate-500">Accès gratuit / limité</p>
+
+                <!-- Social Proof / Trusted By -->
+                <div class="border-t border-slate-800/50 pt-10">
+                    <p class="text-sm text-slate-500 mb-6 font-medium">APPROUVÉ PAR +15,000 MEMBRES ET VU SUR</p>
+                    <div class="flex flex-wrap justify-center gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                        <!-- Placeholder Logos -->
+                        <div class="h-8 w-24 bg-slate-700/50 rounded"></div>
+                        <div class="h-8 w-24 bg-slate-700/50 rounded"></div>
+                        <div class="h-8 w-24 bg-slate-700/50 rounded"></div>
+                        <div class="h-8 w-24 bg-slate-700/50 rounded"></div>
+                        <div class="h-8 w-24 bg-slate-700/50 rounded"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Section: Ce que tu vas apprendre -->
-    <section id="learning" class="relative z-10 py-20 bg-slate-900/30">
+    <!-- Section: Unique Selling Points -->
+    <section id="unique" class="relative z-10 py-24 bg-slate-900/30 border-y border-slate-800/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-white mb-4">Ce que tu vas apprendre</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto">Une approche complète pour maîtriser les marchés financiers, sans jargon inutile.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-brand-card p-6 rounded-2xl border border-slate-800 hover:border-brand-accent/50 transition-all duration-300 hover:shadow-xl hover:shadow-brand-accent/5 group">
-                    <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-accent/20 transition-colors">
-                        <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Left Column: Text -->
+                <div class="text-left">
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-8 leading-tight">Ce qui nous rend <span class="text-brand-accent">unique</span> ?</h2>
+                    
+                    <div class="space-y-8 text-lg text-slate-400">
+                        <p>
+                            <strong class="text-white block mb-2">AlgoTrade Pro™</strong>
+                            AlgoTrade Pro™ utilise une méthode unique pour étudier les modèles graphiques. Elle analyse les tendances récentes avec précision pour identifier ce qui fonctionne le mieux en temps réel.
+                        </p>
+                        
+                        <p>
+                            <strong class="text-white block mb-2">Adapt Fusion©</strong>
+                            Cette technologie ajuste automatiquement les paramètres pour s'assurer que nous avons toujours une longueur d'avance sur le marché, peu importe les conditions.
+                        </p>
+                        
+                        <p>
+                            <strong class="text-white block mb-2">Multi-Devises</strong>
+                            Contrairement aux systèmes qui se concentrent sur une seule paire, AlgoTrade Pro™ trade un panier de devises pour réduire le risque et lisser la courbe de gains.
+                        </p>
+                        
+                        <p class="text-white font-medium pt-4">
+                            Tout est dans AlgoTrade Pro™ – un logiciel simple, plug-and-play pour MetaTrader 5 (MT5).
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold text-white mb-2">Les bases des marchés</h3>
-                    <p class="text-slate-400 text-sm">Comprendre le Forex, les indices et les cryptos. Comment fonctionnent les prix et les sessions de trading.</p>
+
+                    <div class="mt-10">
+                        <a href="#pricing" class="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-brand-dark bg-white rounded-full hover:bg-slate-200 transition-all duration-200 shadow-lg hover:-translate-y-1">
+                            Obtenir Gratuitement
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="bg-brand-card p-6 rounded-2xl border border-slate-800 hover:border-brand-secondary/50 transition-all duration-300 hover:shadow-xl hover:shadow-brand-secondary/5 group">
-                    <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-secondary/20 transition-colors">
-                        <svg class="w-6 h-6 text-brand-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <!-- Right Column: Image -->
+                <div class="relative">
+                    <!-- Decorative background elements -->
+                    <div class="absolute -inset-4 bg-gradient-to-r from-brand-accent/20 to-brand-secondary/20 rounded-full blur-3xl opacity-30"></div>
+                    
+                    <!-- Image Container -->
+                    <div class="relative rounded-3xl overflow-hidden border border-slate-700 shadow-2xl bg-slate-900/50 backdrop-blur-sm group">
+                        <!-- Placeholder for the phone image -->
+                        <img src="https://images.pexels.com/photos/6801874/pexels-photo-6801874.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Interface Trading Mobile" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700">
+                        
+                        <!-- Overlay gradient to match theme -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent pointer-events-none"></div>
                     </div>
-                    <h3 class="text-xl font-semibold text-white mb-2">Gestion du risque</h3>
-                    <p class="text-slate-400 text-sm">Le pilier n°1. Apprends le money management pour protéger ton capital et durer sur le long terme.</p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="bg-brand-card p-6 rounded-2xl border border-slate-800 hover:border-purple-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/5 group">
-                    <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-500/20 transition-colors">
-                        <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-2">Analyse Technique</h3>
-                    <p class="text-slate-400 text-sm">Lecture de graphiques, Price Action, structures de marché et indicateurs clés pour prendre position.</p>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="bg-brand-card p-6 rounded-2xl border border-slate-800 hover:border-yellow-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/5 group">
-                    <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-4 group-hover:bg-yellow-500/20 transition-colors">
-                        <svg class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-2">Psychologie</h3>
-                    <p class="text-slate-400 text-sm">Maîtrise tes émotions. La discipline est ce qui sépare les gagnants des perdants.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section: Comment ça marche -->
-    <section id="how-it-works" class="relative z-10 py-20 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Section: Benefits -->
+    <section id="benefits" class="relative z-10 py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-white mb-4">Comment ça marche ?</h2>
-                <p class="text-slate-400">Ton parcours vers l'autonomie en 4 étapes simples.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Vos avantages</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-brand-card p-6 rounded-xl border border-slate-800">
+                    <h3 class="text-lg font-bold text-white mb-2">Trading Automatisé</h3>
+                    <p class="text-slate-400 text-sm">Basé sur des mathématiques, pas des émotions. 100% automatisé.</p>
+                </div>
+                <div class="bg-brand-card p-6 rounded-xl border border-slate-800">
+                    <h3 class="text-lg font-bold text-white mb-2">Revenu Passif</h3>
+                    <p class="text-slate-400 text-sm">Rien à faire. Le logiciel travaille en arrière-plan pour vous.</p>
+                </div>
+                <div class="bg-brand-card p-6 rounded-xl border border-slate-800">
+                    <h3 class="text-lg font-bold text-white mb-2">Performance Prouvée</h3>
+                    <p class="text-slate-400 text-sm">Des années de backtests et de résultats live vérifiables.</p>
+                </div>
+                <div class="bg-brand-card p-6 rounded-xl border border-slate-800">
+                    <h3 class="text-lg font-bold text-white mb-2">Tranquillité d'esprit</h3>
+                    <p class="text-slate-400 text-sm">Laissez le logiciel gérer pendant que vous profitez de la vie.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Stats -->
+    <section class="relative z-10 py-20 bg-brand-accent/5 border-y border-brand-accent/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl md:text-5xl font-extrabold text-brand-accent mb-2">+487%</div>
+                    <div class="text-sm text-slate-400 uppercase tracking-wider font-semibold">Retour Total</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-extrabold text-white mb-2">92%</div>
+                    <div class="text-sm text-slate-400 uppercase tracking-wider font-semibold">Mois Gagnants</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-extrabold text-brand-secondary mb-2">+5.2%</div>
+                    <div class="text-sm text-slate-400 uppercase tracking-wider font-semibold">Mois Dernier</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-extrabold text-white mb-2">15k+</div>
+                    <div class="text-sm text-slate-400 uppercase tracking-wider font-semibold">Membres Actifs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Performance Table -->
+    <section class="relative z-10 py-24 bg-slate-900/30">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Performances Historiques</h2>
+                <p class="text-slate-400">Des résultats constants et vérifiables année après année.</p>
+            </div>
+
+            <div class="glass-card rounded-2xl overflow-hidden border border-slate-700">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-800/50 border-b border-slate-700">
+                            <th class="p-6 text-slate-300 font-semibold uppercase tracking-wider text-sm">Période</th>
+                            <th class="p-6 text-right text-slate-300 font-semibold uppercase tracking-wider text-sm">Performance</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-700/50">
+                        <tr class="hover:bg-slate-800/30 transition-colors">
+                            <td class="p-6 text-white font-medium">Année Dernière (2024)</td>
+                            <td class="p-6 text-right font-bold text-brand-accent text-xl">+142.8%</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition-colors">
+                            <td class="p-6 text-white font-medium">Cette Année (YTD 2025)</td>
+                            <td class="p-6 text-right font-bold text-brand-accent text-xl">+87.4%</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition-colors">
+                            <td class="p-6 text-white font-medium">Mois Dernier</td>
+                            <td class="p-6 text-right font-bold text-brand-secondary text-xl">+5.2%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-center text-xs text-slate-500 mt-6 italic">
+                *Les performances passées ne préjugent pas des performances futures. Trading à haut risque.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section: How it Works -->
+    <section id="how-it-works" class="relative z-10 py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Comment ça marche ?</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg">Un processus simple en 4 étapes pour commencer à générer des revenus passifs.</p>
             </div>
 
             <div class="relative">
                 <!-- Connecting Line (Desktop) -->
-                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-800 -translate-y-1/2 z-0"></div>
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-brand-accent/20 via-brand-secondary/20 to-brand-accent/20 -translate-y-1/2 rounded-full"></div>
 
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
                     <!-- Step 1 -->
-                    <div class="relative z-10 bg-brand-dark p-6 rounded-xl border border-slate-800 text-center">
-                        <div class="w-10 h-10 bg-brand-accent text-brand-dark font-bold rounded-full flex items-center justify-center mx-auto mb-4 text-lg">1</div>
-                        <h3 class="text-lg font-semibold text-white mb-2">Rejoins Telegram</h3>
-                        <p class="text-slate-400 text-sm">Clique sur le lien et intègre le canal gratuitement.</p>
+                    <div class="relative group">
+                        <div class="glass-card p-8 rounded-2xl border border-slate-700 hover:border-brand-accent/50 transition-all duration-300 relative z-10 bg-slate-900/80 h-full">
+                            <div class="w-14 h-14 bg-brand-accent rounded-full flex items-center justify-center text-brand-dark font-bold text-2xl mb-6 mx-auto shadow-lg shadow-brand-accent/20 group-hover:scale-110 transition-transform">1</div>
+                            <h3 class="text-xl font-bold text-white mb-3 text-center">Créer un Compte</h3>
+                            <p class="text-slate-400 text-center text-sm leading-relaxed">Ouvrez un compte chez un courtier régulé compatible MT4/MT5.</p>
+                        </div>
                     </div>
 
                     <!-- Step 2 -->
-                    <div class="relative z-10 bg-brand-dark p-6 rounded-xl border border-slate-800 text-center">
-                        <div class="w-10 h-10 bg-slate-700 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-4 text-lg">2</div>
-                        <h3 class="text-lg font-semibold text-white mb-2">Reçois le contenu</h3>
-                        <p class="text-slate-400 text-sm">Accède aux vidéos, analyses quotidiennes et PDF éducatifs.</p>
+                    <div class="relative group">
+                        <div class="glass-card p-8 rounded-2xl border border-slate-700 hover:border-brand-secondary/50 transition-all duration-300 relative z-10 bg-slate-900/80 h-full">
+                            <div class="w-14 h-14 bg-brand-secondary rounded-full flex items-center justify-center text-white font-bold text-2xl mb-6 mx-auto shadow-lg shadow-brand-secondary/20 group-hover:scale-110 transition-transform">2</div>
+                            <h3 class="text-xl font-bold text-white mb-3 text-center">Connecter le Bot</h3>
+                            <p class="text-slate-400 text-center text-sm leading-relaxed">Installez AlgoTrade Pro en 5 minutes grâce à notre guide simplifié.</p>
+                        </div>
                     </div>
 
                     <!-- Step 3 -->
-                    <div class="relative z-10 bg-brand-dark p-6 rounded-xl border border-slate-800 text-center">
-                        <div class="w-10 h-10 bg-slate-700 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-4 text-lg">3</div>
-                        <h3 class="text-lg font-semibold text-white mb-2">Apprends & Pratique</h3>
-                        <p class="text-slate-400 text-sm">Suis le plan d'apprentissage progressif à ton rythme.</p>
+                    <div class="relative group">
+                        <div class="glass-card p-8 rounded-2xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300 relative z-10 bg-slate-900/80 h-full">
+                            <div class="w-14 h-14 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mb-6 mx-auto shadow-lg shadow-purple-500/20 group-hover:scale-110 transition-transform">3</div>
+                            <h3 class="text-xl font-bold text-white mb-3 text-center">Laisser Trader</h3>
+                            <p class="text-slate-400 text-center text-sm leading-relaxed">L'algorithme analyse et trade 24/7. Vous n'avez rien à faire.</p>
+                        </div>
                     </div>
 
                     <!-- Step 4 -->
-                    <div class="relative z-10 bg-brand-dark p-6 rounded-xl border border-slate-800 text-center">
-                        <div class="w-10 h-10 bg-slate-700 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-4 text-lg">4</div>
-                        <h3 class="text-lg font-semibold text-white mb-2">Échange</h3>
-                        <p class="text-slate-400 text-sm">Pose tes questions et progresse avec la communauté.</p>
+                    <div class="relative group">
+                        <div class="glass-card p-8 rounded-2xl border border-slate-700 hover:border-green-400/50 transition-all duration-300 relative z-10 bg-slate-900/80 h-full">
+                            <div class="w-14 h-14 bg-green-400 rounded-full flex items-center justify-center text-brand-dark font-bold text-2xl mb-6 mx-auto shadow-lg shadow-green-400/20 group-hover:scale-110 transition-transform">4</div>
+                            <h3 class="text-xl font-bold text-white mb-3 text-center">Retirer les Profits</h3>
+                            <p class="text-slate-400 text-center text-sm leading-relaxed">Récupérez vos gains quand vous le souhaitez. C'est votre argent.</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                 <a href="#pricing" class="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-brand-dark bg-white rounded-full hover:bg-slate-200 transition-all duration-200 shadow-lg hover:-translate-y-1">
+                    Commencer l'aventure
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Section: Pour qui ? -->
-    <section class="relative z-10 py-20 bg-slate-900/50">
+    <!-- Section: Features (Mobile, Transparency, Support) -->
+    <section class="relative z-10 py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl font-bold text-white mb-6">Cette formation est pour toi si...</h2>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-brand-accent/20 mt-1">
-                                <svg class="h-4 w-4 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-medium text-white">Tu es débutant</h4>
-                                <p class="text-slate-400 text-sm">Tu veux comprendre le trading sans te perdre dans les informations contradictoires d'internet.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-brand-accent/20 mt-1">
-                                <svg class="h-4 w-4 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-medium text-white">Tu es intermédiaire</h4>
-                                <p class="text-slate-400 text-sm">Tu trades déjà mais tu manques de structure, de méthode ou de régularité.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-brand-accent/20 mt-1">
-                                <svg class="h-4 w-4 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-medium text-white">Tu veux du sérieux</h4>
-                                <p class="text-slate-400 text-sm">Tu cherches à éviter les arnaques, les promesses de gains rapides et apprendre une vraie compétence.</p>
-                            </div>
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <div class="group">
+                    <div class="w-20 h-20 bg-slate-800 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
                     </div>
+                    <h3 class="text-xl font-bold text-white mb-3">App Mobile</h3>
+                    <p class="text-slate-400">Suivez vos performances partout avec l'application MT4/MT5 mobile.</p>
                 </div>
-                <div class="relative">
-                    <div class="absolute inset-0 bg-gradient-to-r from-brand-accent to-brand-secondary rounded-2xl blur-2xl opacity-20"></div>
-                    <div class="relative bg-brand-card border border-slate-800 rounded-2xl p-8">
-                        <h3 class="text-2xl font-bold text-white mb-4">Pourquoi Telegram ?</h3>
-                        <p class="text-slate-400 mb-6">
-                            C'est le moyen le plus direct pour apprendre. Pas d'algorithme qui trie le contenu. Tu reçois les notifications en temps réel pour les analyses de marché et les opportunités.
-                        </p>
-                        <ul class="space-y-2 mb-8 text-slate-300">
-                            <li class="flex items-center"><svg class="w-5 h-5 text-brand-secondary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg> Réactivité immédiate</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 text-brand-secondary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0z"></path></svg> Communauté active</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 text-brand-secondary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M12 12h.01M12 6h.01M12 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Format simple et accessible</li>
-                        </ul>
-                        <a href="https://t.me/ton_canal_trading" target="_blank" class="block w-full text-center bg-white text-brand-dark font-bold py-3 rounded-lg hover:bg-slate-200 transition-colors">
-                            Rejoindre le canal Telegram
-                        </a>
+                <div class="group">
+                    <div class="w-20 h-20 bg-slate-800 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Transparence</h3>
+                    <p class="text-slate-400">Vérifiez nos résultats en direct et nos rapports de backtest.</p>
+                </div>
+                <div class="group">
+                    <div class="w-20 h-20 bg-slate-800 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Support 7j/7</h3>
+                    <p class="text-slate-400">Disponible Lun-Dim. Réponses généralement en moins de 10 minutes.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section: À propos -->
-    <section id="about" class="relative z-10 py-20">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="w-20 h-20 bg-slate-800 rounded-full mx-auto mb-6 flex items-center justify-center border-2 border-brand-accent">
-                <span class="text-2xl">👨‍💻</span>
+    <!-- Section: Pricing -->
+    <section id="pricing" class="relative z-10 py-24 bg-slate-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Accès Exclusif</h2>
+                <p class="text-slate-400">Profitez de notre technologie de pointe gratuitement pour une durée limitée.</p>
             </div>
-            <h2 class="text-3xl font-bold text-white mb-6">À propos du mentor</h2>
-            <p class="text-lg text-slate-400 leading-relaxed">
-                "Trader sur futures et indices depuis plusieurs années, j’ai vu trop de débutants perdre leur capital à cause de mauvaises informations. J’ai créé cette communauté pour aider les débutants à construire une base solide, loin des promesses irréalistes de richesse rapide. Ici, on parle de travail, de discipline et de stratégie."
-            </p>
+
+            <div class="max-w-md mx-auto">
+                <!-- Free Plan -->
+                <div class="relative bg-gradient-to-b from-brand-card to-brand-dark p-8 rounded-2xl border-2 border-brand-accent transform hover:scale-105 transition-transform duration-300 shadow-2xl shadow-brand-accent/20 flex flex-col">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-accent text-brand-dark font-bold px-4 py-1 rounded-full text-xs uppercase tracking-wide shadow-lg">Offre Limitée</div>
+                    
+                    <h3 class="text-2xl font-bold text-white mb-2 text-center">Bot Trading MT5</h3>
+                    <div class="flex justify-center items-baseline mb-6">
+                        <span class="text-5xl font-extrabold text-brand-accent">GRATUIT</span>
+                    </div>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center text-white">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-accent/20 flex items-center justify-center mr-3">
+                                <svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <span class="text-base">Prise de position <strong>100% Automatique</strong></span>
+                        </div>
+                        <div class="flex items-center text-white">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-accent/20 flex items-center justify-center mr-3">
+                                <svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <span class="text-base">Compatible <strong>MetaTrader 5 (MT5)</strong></span>
+                        </div>
+                        <div class="flex items-center text-white">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-accent/20 flex items-center justify-center mr-3">
+                                <svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <span class="text-base">Installation en <strong>moins de 5 min</strong></span>
+                        </div>
+                        <div class="flex items-center text-white">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-accent/20 flex items-center justify-center mr-3">
+                                <svg class="w-5 h-5 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                            </div>
+                            <span class="text-base">Accès Communauté <strong>VIP Telegram</strong></span>
+                        </div>
+                    </div>
+
+                    <a href="https://t.me/ton_canal_trading" target="_blank" class="block w-full py-4 px-6 text-center rounded-xl bg-brand-accent text-brand-dark font-extrabold text-lg hover:bg-green-400 transition-all duration-300 shadow-lg shadow-brand-accent/30 hover:-translate-y-1 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                        Obtenir le Bot sur Telegram
+                    </a>
+                    <p class="text-xs text-slate-500 text-center mt-4">Aucune carte bancaire requise • Accès immédiat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: FAQ -->
+    <section id="faq" class="relative z-10 py-24">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Questions Fréquentes</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Q1 -->
+                <details class="group bg-slate-900/50 rounded-xl border border-slate-800 open:border-brand-accent/30 transition-all">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-semibold text-white">Pourquoi AlgoTrade Pro est-il gratuit ?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-slate-400 px-6 pb-6">
+                        Nous croyons en la démocratisation du trading algorithmique. En rendant notre technologie accessible gratuitement, nous construisons une communauté forte sur Telegram et prouvons la valeur de nos outils avant tout.
+                    </div>
+                </details>
+
+                <!-- Q2 -->
+                <details class="group bg-slate-900/50 rounded-xl border border-slate-800 open:border-brand-accent/30 transition-all">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-semibold text-white">Est-ce vraiment gratuit à vie ?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-slate-400 px-6 pb-6">
+                        Oui, l'accès au bot et au canal Telegram est actuellement 100% gratuit. Il n'y a aucun abonnement caché ni frais de licence.
+                    </div>
+                </details>
+
+                <!-- Q5 -->
+                <details class="group bg-slate-900/50 rounded-xl border border-slate-800 open:border-brand-accent/30 transition-all">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-semibold text-white">Quel est l'investissement minimum ?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-slate-400 px-6 pb-6">
+                        Nous recommandons un minimum de 500€ pour commencer à voir des résultats significatifs, bien que le logiciel puisse fonctionner avec moins sur certains courtiers (comptes cent).
+                    </div>
+                </details>
+
+                <!-- Q6 -->
+                <details class="group bg-slate-900/50 rounded-xl border border-slate-800 open:border-brand-accent/30 transition-all">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-semibold text-white">Puis-je utiliser l'algorithme avec des Prop Firms ?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-slate-400 px-6 pb-6">
+                        Oui, absolument. Notre algorithme est conçu pour respecter les règles de drawdown de la plupart des Prop Firms majeures qui autorisent le trading algorithmique (EA).
+                    </div>
+                </details>
+
+                <!-- Q7 -->
+                <details class="group bg-slate-900/50 rounded-xl border border-slate-800 open:border-brand-accent/30 transition-all">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-semibold text-white">Comment installer le logiciel ?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-slate-400 px-6 pb-6">
+                        L'installation est simple et prend moins de 5 minutes. Nous fournissons un guide vidéo étape par étape et un PDF détaillé. Notre support peut aussi vous aider à l'installer à distance si besoin.
+                    </div>
+                </details>
+
+                <!-- Q8 -->
+                <details class="group bg-slate-900/50 rounded-xl border border-slate-800 open:border-brand-accent/30 transition-all">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-semibold text-white">Quels sont les avantages d'un algorithme de trading ?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-slate-400 px-6 pb-6">
+                        Il élimine les émotions humaines (peur, avidité), trade 24h/24, exécute les ordres instantanément et suit strictement la stratégie définie sans fatigue ni erreur de jugement.
+                    </div>
+                </details>
+
+                <!-- Q9 -->
+                <details class="group bg-slate-900/50 rounded-xl border border-slate-800 open:border-brand-accent/30 transition-all">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-semibold text-white">Êtes-vous nouveau dans le monde de l'investissement et du trading ?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-slate-400 px-6 pb-6">
+                        Pas de souci ! AlgoTrade Pro est 100% automatisé. Vous n'avez pas besoin d'analyser les graphiques ou de comprendre les marchés en profondeur pour l'utiliser. C'est conçu pour les débutants comme pour les experts.
+                    </div>
+                </details>
+
+                <!-- Q10 -->
+                <details class="group bg-slate-900/50 rounded-xl border border-slate-800 open:border-brand-accent/30 transition-all">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-semibold text-white">De quel effet de levier ai-je besoin ?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-slate-400 px-6 pb-6">
+                        Nous recommandons un effet de levier de 1:500 pour une performance optimale, mais le logiciel fonctionne aussi avec des leviers plus faibles (1:100 minimum).
+                    </div>
+                </details>
+
+                <!-- Q11 -->
+                <details class="group bg-slate-900/50 rounded-xl border border-slate-800 open:border-brand-accent/30 transition-all">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-semibold text-white">Quel est le drawdown moyen ?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-slate-400 px-6 pb-6">
+                        Le drawdown moyen historique se situe entre 10% et 15%, selon le niveau de risque choisi (Conservateur ou Agressif). La gestion du risque est notre priorité absolue.
+                    </div>
+                </details>
+
+                <!-- Q12 -->
+                <details class="group bg-slate-900/50 rounded-xl border border-slate-800 open:border-brand-accent/30 transition-all">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-semibold text-white">Puis-je trader sur le même compte ?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-slate-400 px-6 pb-6">
+                        Il est déconseillé de trader manuellement sur le même compte que le robot pour éviter les conflits de marge et de gestion des ordres. Ouvrez un sous-compte dédié pour le robot.
+                    </div>
+                </details>
+
+                <!-- Q13 -->
+                <details class="group bg-slate-900/50 rounded-xl border border-slate-800 open:border-brand-accent/30 transition-all">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-semibold text-white">Où dois-je déposer mes fonds ?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-slate-400 px-6 pb-6">
+                        Vos fonds restent toujours sur votre propre compte de courtage (broker). Nous n'avons jamais accès à votre argent. Vous gardez le contrôle total de vos dépôts et retraits.
+                    </div>
+                </details>
+
+                <!-- Q14 -->
+                <details class="group bg-slate-900/50 rounded-xl border border-slate-800 open:border-brand-accent/30 transition-all">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-semibold text-white">Puis-je utiliser n'importe quel courtier ?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-slate-400 px-6 pb-6">
+                        Oui, tant que le courtier propose la plateforme MetaTrader 4 (MT4) ou MT5 et permet le trading automatisé (EAs). Nous pouvons vous recommander des courtiers fiables si besoin.
+                    </div>
+                </details>
+
+                <!-- Q15 -->
+                <details class="group bg-slate-900/50 rounded-xl border border-slate-800 open:border-brand-accent/30 transition-all">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-semibold text-white">La licence peut-elle être modifiée (Démo vers Réel) ?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-slate-400 px-6 pb-6">
+                        Oui, vous pouvez changer le numéro de compte associé à votre licence à tout moment depuis votre espace membre. C'est flexible et instantané.
+                    </div>
+                </details>
+
+                <!-- Q16 -->
+                <details class="group bg-slate-900/50 rounded-xl border border-slate-800 open:border-brand-accent/30 transition-all">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-semibold text-white">Cherchez-vous des preuves supplémentaires ?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-slate-400 px-6 pb-6">
+                        Rejoignez notre canal Telegram pour voir les résultats quotidiens partagés par nos membres et l'équipe. La transparence est notre valeur clé.
+                    </div>
+                </details>
+
+                <!-- Q17 -->
+                <details class="group bg-slate-900/50 rounded-xl border border-slate-800 open:border-brand-accent/30 transition-all">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-semibold text-white">Combien de temps l'offre gratuite est-elle valable ?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-slate-400 px-6 pb-6">
+                        Cette offre est disponible pour une durée limitée afin de faire connaître notre technologie. Nous nous réservons le droit de la retirer à tout moment, alors profitez-en maintenant.
+                    </div>
+                </details>
+
+                <!-- Q18 -->
+                <details class="group bg-slate-900/50 rounded-xl border border-slate-800 open:border-brand-accent/30 transition-all">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-semibold text-white">Ai-je besoin d'un PC, ou puis-je l'utiliser sur Smartphone ?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-slate-400 px-6 pb-6">
+                        Le logiciel doit être installé sur un PC (Windows) ou un VPS (serveur virtuel) pour fonctionner 24/7. Une fois installé, vous pouvez suivre et gérer les trades depuis votre smartphone via l'application mobile MT4.
+                    </div>
+                </details>
+
+                <!-- Q19 -->
+                <details class="group bg-slate-900/50 rounded-xl border border-slate-800 open:border-brand-accent/30 transition-all">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-semibold text-white">Historique en direct et backtests</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-slate-400 px-6 pb-6">
+                        Tous nos résultats sont vérifiés par des tiers (Myfxbook). Vous pouvez consulter nos liens de performance en direct dans la section "Transparence" ou sur notre canal Telegram.
+                    </div>
+                </details>
+
+                <div class="mt-12 text-center">
+                    <a href="#pricing" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-brand-dark bg-brand-accent rounded-full hover:bg-green-400 transition-all duration-200 shadow-lg shadow-brand-accent/25 hover:-translate-y-1">
+                        Obtenir Gratuitement Maintenant
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="relative z-10 bg-slate-950 border-t border-slate-900 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
-                <div class="mb-4 md:mb-0">
-                    <span class="text-xl font-bold text-white">Trading<span class="text-brand-accent">Pro</span></span>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <span class="text-xl font-bold text-white tracking-tight">AlgoTrade<span class="text-brand-accent">Pro</span></span>
+                    <p class="mt-4 text-slate-500 text-sm max-w-xs">
+                        Logiciel de trading automatisé de pointe pour les investisseurs modernes.
+                    </p>
                 </div>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-slate-500 hover:text-white transition-colors">Contact</a>
-                    <a href="#" class="text-slate-500 hover:text-white transition-colors">Mentions Légales</a>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Liens</h4>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li><a href="#" class="hover:text-brand-accent">Accueil</a></li>
+                        <li><a href="#pricing" class="hover:text-brand-accent">Offre Gratuit</a></li>
+                        <li><a href="#faq" class="hover:text-brand-accent">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Légal</h4>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li><a href="#" class="hover:text-brand-accent">Mentions Légales</a></li>
+                        <li><a href="#" class="hover:text-brand-accent">CGV</a></li>
+                        <li><a href="#" class="hover:text-brand-accent">Politique de Confidentialité</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="border-t border-slate-900 pt-8 text-center md:text-left">
-                <p class="text-xs text-slate-600 mb-2">
-                    AVERTISSEMENT : Le trading comporte des risques importants de perte en capital et ne convient pas à tous les investisseurs. 
-                    Le contenu de ce site et du canal Telegram est fourni à titre purement éducatif et informatif. 
-                    Il ne constitue en aucun cas un conseil en investissement ou une incitation à acheter ou vendre des instruments financiers.
+                <p class="text-xs text-slate-600 mb-2 leading-relaxed">
+                    AVERTISSEMENT SUR LES RISQUES : Le trading de produits à effet de levier comporte un niveau de risque élevé. 79,43 % des comptes d'investisseurs particuliers perdent de l'argent lorsqu'ils tradent manuellement. Vous ne devriez pas risquer plus que ce que vous pouvez vous permettre de perdre. Veuillez noter que vous ne pouvez recevoir des services d'investissement d'une entreprise d'un pays tiers qu'à votre initiative exclusive, en assumant tous les risques impliqués.
                 </p>
                 <p class="text-xs text-slate-700">
-                    &copy; 2023 TradingPro. Tous droits réservés.
+                    &copy; 2025 AlgoTrade Pro. Tous droits réservés.
                 </p>
             </div>
         </div>
