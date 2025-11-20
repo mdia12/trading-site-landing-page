@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apprends le Trading - Communauté Telegram</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#020617', // Slate 950
+                            card: '#0f172a', // Slate 900
+                            accent: '#22c55e', // Green 500
+                            secondary: '#3b82f6', // Blue 500
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom scrollbar for a premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #020617; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #334155; 
+        }
+        
+        .glass-effect {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-300 font-sans antialiased selection:bg-brand-accent selection:text-white overflow-x-hidden">
+
+    <!-- Background TradingView Chart -->
+    <div class="fixed inset-0 z-0 opacity-5 pointer-events-none grayscale">
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container h-full w-full">
+            <div class="tradingview-widget-container__widget h-full w-full"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+            {
+            "autosize": true,
+            "symbol": "BINANCE:BTCUSDT",
+            "interval": "D",
+            "timezone": "Etc/UTC",
+            "theme": "dark",
+            "style": "1",
+            "locale": "fr",
+            "enable_publishing": false,
+            "hide_top_toolbar": true,
+            "hide_legend": true,
+            "save_image": false,
+            "calendar": false,
+            "hide_volume": true,
+            "support_host": "https://www.tradingview.com"
+            }
+            </script>
+        </div>
+        <!-- TradingView Widget END -->
+    </div>
+
+    <!-- Navigation (Simple) -->
+    <nav class="fixed w-full z-50 glass-effect border-b border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-xl font-bold text-white tracking-tight">Trading<span class="text-brand-accent">Pro</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#learning" class="text-sm font-medium hover:text-brand-accent transition-colors">Programme</a>
+                    <a href="#how-it-works" class="text-sm font-medium hover:text-brand-accent transition-colors">Fonctionnement</a>
+                    <a href="#about" class="text-sm font-medium hover:text-brand-accent transition-colors">À propos</a>
+                </div>
+                <div>
+                    <a href="https://t.me/ton_canal_trading" target="_blank" class="bg-brand-accent/10 text-brand-accent hover:bg-brand-accent hover:text-white px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 border border-brand-accent/20">
+                        Telegram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Background glow effects -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-0 pointer-events-none">
+            <div class="absolute top-20 left-1/4 w-96 h-96 bg-brand-secondary/20 rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-accent/10 rounded-full blur-[100px]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="animate-slide-up">
+                <span class="inline-block py-1 px-3 rounded-full bg-slate-800/50 border border-slate-700 text-brand-accent text-xs font-semibold tracking-wide uppercase mb-6">
+                    Rejoins l'élite du trading
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white tracking-tight mb-6 leading-tight">
+                    Apprends le trading <br class="hidden sm:block" />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-secondary">comme un pro.</span>
+                </h1>
+                <p class="mt-4 text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10">
+                    Rejoins une communauté Telegram où tu apprends le trading étape par étape : bases, gestion du risque, psychologie et plans de trading.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="https://t.me/ton_canal_trading" target="_blank" class="group relative inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-brand-accent rounded-full hover:bg-green-500 hover:shadow-lg hover:shadow-brand-accent/30 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-accent focus:ring-offset-brand-dark">
+                        <span>Rejoindre le canal Telegram</span>
+                        <svg class="w-5 h-5 ml-2 -mr-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                    </a>
+                </div>
+                <p class="mt-4 text-sm text-slate-500">Accès gratuit / limité</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section: Ce que tu vas apprendre -->
+    <section id="learning" class="relative z-10 py-20 bg-slate-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Ce que tu vas apprendre</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Une approche complète pour maîtriser les marchés financiers, sans jargon inutile.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-slate-800 hover:border-brand-accent/50 transition-all duration-300 hover:shadow-xl hover:shadow-brand-accent/5 group">
+                    <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-accent/20 transition-colors">
+                        <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Les bases des marchés</h3>
+                    <p class="text-slate-400 text-sm">Comprendre le Forex, les indices et les cryptos. Comment fonctionnent les prix et les sessions de trading.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-slate-800 hover:border-brand-secondary/50 transition-all duration-300 hover:shadow-xl hover:shadow-brand-secondary/5 group">
+                    <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-secondary/20 transition-colors">
+                        <svg class="w-6 h-6 text-brand-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Gestion du risque</h3>
+                    <p class="text-slate-400 text-sm">Le pilier n°1. Apprends le money management pour protéger ton capital et durer sur le long terme.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-slate-800 hover:border-purple-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/5 group">
+                    <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-500/20 transition-colors">
+                        <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Analyse Technique</h3>
+                    <p class="text-slate-400 text-sm">Lecture de graphiques, Price Action, structures de marché et indicateurs clés pour prendre position.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-slate-800 hover:border-yellow-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/5 group">
+                    <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-4 group-hover:bg-yellow-500/20 transition-colors">
+                        <svg class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Psychologie</h3>
+                    <p class="text-slate-400 text-sm">Maîtrise tes émotions. La discipline est ce qui sépare les gagnants des perdants.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Comment ça marche -->
+    <section id="how-it-works" class="relative z-10 py-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Comment ça marche ?</h2>
+                <p class="text-slate-400">Ton parcours vers l'autonomie en 4 étapes simples.</p>
+            </div>
+
+            <div class="relative">
+                <!-- Connecting Line (Desktop) -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-800 -translate-y-1/2 z-0"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Step 1 -->
+                    <div class="relative z-10 bg-brand-dark p-6 rounded-xl border border-slate-800 text-center">
+                        <div class="w-10 h-10 bg-brand-accent text-brand-dark font-bold rounded-full flex items-center justify-center mx-auto mb-4 text-lg">1</div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Rejoins Telegram</h3>
+                        <p class="text-slate-400 text-sm">Clique sur le lien et intègre le canal gratuitement.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative z-10 bg-brand-dark p-6 rounded-xl border border-slate-800 text-center">
+                        <div class="w-10 h-10 bg-slate-700 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-4 text-lg">2</div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Reçois le contenu</h3>
+                        <p class="text-slate-400 text-sm">Accède aux vidéos, analyses quotidiennes et PDF éducatifs.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative z-10 bg-brand-dark p-6 rounded-xl border border-slate-800 text-center">
+                        <div class="w-10 h-10 bg-slate-700 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-4 text-lg">3</div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Apprends & Pratique</h3>
+                        <p class="text-slate-400 text-sm">Suis le plan d'apprentissage progressif à ton rythme.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative z-10 bg-brand-dark p-6 rounded-xl border border-slate-800 text-center">
+                        <div class="w-10 h-10 bg-slate-700 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-4 text-lg">4</div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Échange</h3>
+                        <p class="text-slate-400 text-sm">Pose tes questions et progresse avec la communauté.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Pour qui ? -->
+    <section class="relative z-10 py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-6">Cette formation est pour toi si...</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-brand-accent/20 mt-1">
+                                <svg class="h-4 w-4 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-white">Tu es débutant</h4>
+                                <p class="text-slate-400 text-sm">Tu veux comprendre le trading sans te perdre dans les informations contradictoires d'internet.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-brand-accent/20 mt-1">
+                                <svg class="h-4 w-4 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-white">Tu es intermédiaire</h4>
+                                <p class="text-slate-400 text-sm">Tu trades déjà mais tu manques de structure, de méthode ou de régularité.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-brand-accent/20 mt-1">
+                                <svg class="h-4 w-4 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-white">Tu veux du sérieux</h4>
+                                <p class="text-slate-400 text-sm">Tu cherches à éviter les arnaques, les promesses de gains rapides et apprendre une vraie compétence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-brand-accent to-brand-secondary rounded-2xl blur-2xl opacity-20"></div>
+                    <div class="relative bg-brand-card border border-slate-800 rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold text-white mb-4">Pourquoi Telegram ?</h3>
+                        <p class="text-slate-400 mb-6">
+                            C'est le moyen le plus direct pour apprendre. Pas d'algorithme qui trie le contenu. Tu reçois les notifications en temps réel pour les analyses de marché et les opportunités.
+                        </p>
+                        <ul class="space-y-2 mb-8 text-slate-300">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-brand-secondary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg> Réactivité immédiate</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-brand-secondary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0z"></path></svg> Communauté active</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-brand-secondary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M12 12h.01M12 6h.01M12 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Format simple et accessible</li>
+                        </ul>
+                        <a href="https://t.me/ton_canal_trading" target="_blank" class="block w-full text-center bg-white text-brand-dark font-bold py-3 rounded-lg hover:bg-slate-200 transition-colors">
+                            Rejoindre le canal Telegram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: À propos -->
+    <section id="about" class="relative z-10 py-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="w-20 h-20 bg-slate-800 rounded-full mx-auto mb-6 flex items-center justify-center border-2 border-brand-accent">
+                <span class="text-2xl">👨‍💻</span>
+            </div>
+            <h2 class="text-3xl font-bold text-white mb-6">À propos du mentor</h2>
+            <p class="text-lg text-slate-400 leading-relaxed">
+                "Trader sur futures et indices depuis plusieurs années, j’ai vu trop de débutants perdre leur capital à cause de mauvaises informations. J’ai créé cette communauté pour aider les débutants à construire une base solide, loin des promesses irréalistes de richesse rapide. Ici, on parle de travail, de discipline et de stratégie."
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 bg-slate-950 border-t border-slate-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-xl font-bold text-white">Trading<span class="text-brand-accent">Pro</span></span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-500 hover:text-white transition-colors">Contact</a>
+                    <a href="#" class="text-slate-500 hover:text-white transition-colors">Mentions Légales</a>
+                </div>
+            </div>
+            <div class="border-t border-slate-900 pt-8 text-center md:text-left">
+                <p class="text-xs text-slate-600 mb-2">
+                    AVERTISSEMENT : Le trading comporte des risques importants de perte en capital et ne convient pas à tous les investisseurs. 
+                    Le contenu de ce site et du canal Telegram est fourni à titre purement éducatif et informatif. 
+                    Il ne constitue en aucun cas un conseil en investissement ou une incitation à acheter ou vendre des instruments financiers.
+                </p>
+                <p class="text-xs text-slate-700">
+                    &copy; 2023 TradingPro. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
