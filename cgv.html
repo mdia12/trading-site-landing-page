@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGU / CGV - AlgoTrade Pro</title>
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#020617', // Slate 950
+                            card: '#0f172a', // Slate 900
+                            accent: '#0099ff', // Bright Blue (Telegram style)
+                            secondary: '#38bdf8', // Sky 400
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #334155; }
+        .glass-effect { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-300 font-sans antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-effect">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-brand-accent rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <span class="text-xl font-bold text-white tracking-tight">AlgoTrade<span class="text-brand-accent">Pro</span></span>
+                    </a>
+                </div>
+                <div>
+                    <a href="index.html" class="text-sm font-medium hover:text-brand-accent transition-colors">Retour à l'accueil</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-white mb-8">Conditions Générales d'Utilisation (CGU)</h1>
+            
+            <div class="space-y-8 text-slate-400">
+                <section class="bg-slate-900/50 p-8 rounded-2xl border border-slate-800">
+                    <h2 class="text-xl font-bold text-white mb-4">1. Objet</h2>
+                    <p class="mb-4">
+                        Les présentes Conditions Générales d'Utilisation ont pour objet de définir les modalités de mise à disposition des services du site AlgoTrade Pro, ci-après nommé « le Service » et les conditions d'utilisation du Service par l'Utilisateur.
+                    </p>
+                </section>
+
+                <section class="bg-slate-900/50 p-8 rounded-2xl border border-slate-800">
+                    <h2 class="text-xl font-bold text-white mb-4">2. Description du Service</h2>
+                    <p class="mb-4">
+                        AlgoTrade Pro fournit un logiciel de trading algorithmique (Expert Advisor) compatible avec la plateforme MetaTrader 5. Le logiciel est fourni à titre gratuit (ou selon les conditions en vigueur) pour un usage personnel.
+                    </p>
+                </section>
+
+                <section class="bg-slate-900/50 p-8 rounded-2xl border border-slate-800 border-l-4 border-l-brand-accent">
+                    <h2 class="text-xl font-bold text-white mb-4">3. Absence de garantie de résultats</h2>
+                    <p class="mb-4">
+                        L'Utilisateur reconnaît que le trading sur les marchés financiers comporte des aléas. AlgoTrade Pro ne garantit aucun résultat financier, profit ou gain spécifique. Les performances passées présentées sur le site ne préjugent pas des performances futures.
+                    </p>
+                    <p class="mb-4">
+                        Le logiciel est un outil d'aide à la décision et d'automatisation. L'Utilisateur reste seul maître de son compte de trading et des risques qu'il prend.
+                    </p>
+                </section>
+
+                <section class="bg-slate-900/50 p-8 rounded-2xl border border-slate-800">
+                    <h2 class="text-xl font-bold text-white mb-4">4. Responsabilité</h2>
+                    <p class="mb-4">
+                        AlgoTrade Pro ne saurait être tenu responsable des pertes financières directes ou indirectes subies par l'Utilisateur lors de l'utilisation du logiciel. L'Utilisateur accepte d'utiliser le logiciel à ses propres risques et périls.
+                    </p>
+                    <p class="mb-4">
+                        Il est de la responsabilité de l'Utilisateur de s'assurer que le trading algorithmique est autorisé par son courtier (broker) et par la législation de son pays de résidence.
+                    </p>
+                </section>
+
+                <section class="bg-slate-900/50 p-8 rounded-2xl border border-slate-800">
+                    <h2 class="text-xl font-bold text-white mb-4">5. Accès au service</h2>
+                    <p class="mb-4">
+                        L'éditeur s'efforce de permettre l'accès au site 24 heures sur 24, 7 jours sur 7, sauf en cas de force majeure ou d'un événement hors du contrôle de l'éditeur, et sous réserve des éventuelles pannes et interventions de maintenance nécessaires au bon fonctionnement du site et des services.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-950 border-t border-slate-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-xs text-slate-600">
+                &copy; 2025 AlgoTrade Pro. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
