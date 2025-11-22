@@ -928,9 +928,12 @@
         </div>
 
         <!-- Toggle Button -->
-        <button id="chat-toggle" class="w-14 h-14 bg-brand-accent rounded-full shadow-lg shadow-brand-accent/30 flex items-center justify-center hover:scale-110 transition-transform duration-200 group">
-            <svg class="w-7 h-7 text-white group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
-        </button>
+        <div class="relative">
+            <span class="absolute -inset-1 rounded-full bg-brand-accent/50 animate-ping"></span>
+            <button id="chat-toggle" class="relative w-14 h-14 bg-brand-accent rounded-full shadow-lg shadow-brand-accent/30 flex items-center justify-center hover:scale-110 transition-transform duration-200 group">
+                <svg class="w-7 h-7 text-white group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+            </button>
+        </div>
     </div>
 
     <script>
